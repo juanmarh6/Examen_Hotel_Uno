@@ -1,6 +1,8 @@
 package PaqHotel;
 
-public class Hotel {
+import java.io.Serializable;
+
+public class Hotel implements Serializable {
     public int numHab = 6;
     public int numPisos = 8;
     public Cliente[][] habitaciones;
@@ -93,5 +95,14 @@ public class Hotel {
         }
 
         return new int[]{-1, -1};
+    }
+
+    public Cliente buscarPorDni(int dni){
+        for (int i = 0; i < numPisos; i++)
+            for (int j = 0; j < numHab; j++){
+                if (habitaciones[i][j] != null && habitaciones[i][j].getDni() == dni)
+                    return habitaciones[i][j];
+            }
+        return null;
     }
 }

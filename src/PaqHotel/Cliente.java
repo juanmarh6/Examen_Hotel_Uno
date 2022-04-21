@@ -101,4 +101,5 @@ public class Cliente implements Serializable {
     public String toString() {
         return "Nombre: " + this.nombre + " " + this.apellidos + "\tDNI: " + this.dni + "\nTeléfono: " + this.teléfono + "\tNúmero de tarjeta: " + this.numTarjeta + "\nFecha de alta: " + this.alta + "\tFecha de baja: " + this.baja + "\nRégimen: " + this.régimen;
     }
+    //Commit C2
 }
